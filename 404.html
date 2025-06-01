@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Meta Refresh Tag for IMMEDIATE Redirect -->
+    <meta http-equiv="refresh" content="0;url=index.html">
+
+    <title>Spargat Group - Page Not Found (Redirecting...)</title>
+    <meta name="robots" content="noindex, nofollow"> <!-- Important for SEO -->
+
+    <!-- SEO and General Meta (Minimal for 404) -->
+    <meta name="description" content="Oops! Page not found. Redirecting you to the Spargat Group homepage.">
+    <!-- Open Graph / Facebook / Discord -->
+    <meta property="og:title" content="Page Not Found - Spargat Group">
+    <meta property="og:description" content="The page you were looking for was not found. Redirecting to homepage.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://spargatgroup.github.io/404.html">
+    <meta property="og:site_name" content="Spargat Group">
+    <meta property="og:image" content="https://glowing-boba-bb33bb.netlify.app/logo_home.png">
+    <meta property="og:image:alt" content="Spargat Group Logo">
+    <meta property="og:locale" content="en_US">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Page Not Found - Spargat Group">
+    <meta name="twitter:description" content="The page you were looking for was not found. Redirecting to homepage.">
+    <meta name="twitter:image" content="https://glowing-boba-bb33bb.netlify.app/logo_home.png">
+    <!-- Theme Color for Browser UI -->
+    <meta name="theme-color" content="#7950F2">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #7950F2; --primary-light: #926BFF; --primary-glow: rgba(121, 80, 242, 0.5);
+            --primary-soft-glow: rgba(121, 80, 242, 0.3); --dark-bg: #0D0C1D; --content-bg: #121127;
+            --content-bg-alpha: rgba(18, 17, 39, 0.85); --border-color: rgba(121, 80, 242, 0.2);
+            --light-text: #E0E7FF; --medium-text: #A0A8C0; --navbar-height-desktop: 70px;
+            --primary-rgb: 121, 80, 242;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { background: var(--dark-bg); } /* No scrollbar-gutter needed */
+        body {
+            font-family: 'Poppins', sans-serif; background-color: var(--dark-bg); color: var(--light-text);
+            line-height: 1.7; overflow: hidden; /* Prevent scroll on 404 */
+            min-height: 100vh; position: relative;
+            display: flex; flex-direction: column;
+            padding-top: var(--navbar-height-desktop); /* For fixed navbar */
+            -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;
+        }
+        pre, code, input, textarea { -webkit-user-select: text; -moz-user-select: text; -ms-user-select: text; user-select: text; }
+
+        #preloader { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: var(--dark-bg); z-index: 10001; display: flex; align-items: center; justify-content: center; opacity: 1; visibility: visible; transition: opacity 0.5s ease-out 0.2s, visibility 0.5s ease-out 0.2s; }
+        #preloader.loaded { opacity: 0; visibility: hidden; pointer-events: none; }
+        .spinner { width: 50px; height: 50px; border: 5px solid rgba(var(--primary-rgb), 0.2); border-top-color: var(--primary); border-radius: 50%; animation: spin 1s linear infinite; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        /* No particles on 404 for speed */
+
+        .content-wrapper { position: relative; z-index: 1; flex-grow: 1; display:flex; flex-direction: column; }
+
+        .navbar { position: fixed; top: 0; left:0; width: 100%; background: var(--content-bg-alpha); backdrop-filter: blur(15px); z-index: 1000; box-shadow: 0 1px 5px rgba(0,0,0,0.3); border-bottom: 1px solid var(--border-color); height: var(--navbar-height-desktop); display:flex; align-items: center; }
+        .nav-container { max-width: 1200px; width:100%; margin: 0 auto; display: flex; justify-content: center; align-items: center; padding: 0 2rem; } /* Centered logo */
+        .nav-logo-link { display: flex; align-items: center;}
+        .nav-logo { height: 38px; transition: transform 0.3s ease, filter 0.3s ease; filter: drop-shadow(0 0 5px var(--primary-soft-glow)); }
+        .nav-logo:hover { transform: scale(1.05); filter: drop-shadow(0 0 10px var(--primary-glow));}
+
+        .error-page-container {
+            flex-grow: 1; display: flex; flex-direction: column;
+            align-items: center; justify-content: center; text-align: center;
+            padding: 2rem;
+        }
+        .error-code {
+            font-size: clamp(5rem, 18vw, 10rem); font-weight: 700;
+            color: var(--primary); line-height: 1; margin-bottom: -0.1em;
+            text-shadow: 0 0 18px var(--primary-glow), 0 0 35px var(--primary-soft-glow);
+        }
+        .error-message-h1 { /* Renamed to avoid conflict with any .error-message class if used elsewhere */
+            font-size: clamp(1.3rem, 4.5vw, 2.2rem); font-weight: 600;
+            color: var(--light-text); margin-bottom: 1rem;
+            text-shadow: 0 0 8px var(--primary-soft-glow);
+        }
+        .error-description {
+            font-size: clamp(0.9rem, 2.2vw, 1.1rem); color: var(--medium-text);
+            margin-bottom: 1.5rem; max-width: 450px;
+        }
+        .error-description a {
+            color: var(--primary-light);
+            text-decoration: underline;
+            font-weight: 500;
+        }
+         .error-description a:hover {
+            color: var(--primary);
+        }
+
+        .footer {
+            text-align: center; padding: 2rem 0 1.5rem;
+            border-top: 1px solid var(--border-color); background: var(--dark-bg); width: 100%;
+        }
+        .footer p.copyright { color: var(--medium-text); font-size: 0.75rem; opacity: 0.7;}
+        .social-links { display: flex; justify-content: center; gap: 0.8rem; margin-bottom: 1.2rem;}
+        .social-links a { width: 35px; height: 35px; background: rgba(var(--primary-rgb), 0.1); color: var(--medium-text); font-size: 1rem; border-radius: 50%; transition: all 0.2s ease; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center; }
+        .social-links a:hover, .social-links a:focus { background: var(--primary); color:white; transform: translateY(-3px) scale(1.1); box-shadow: 0 4px 10px var(--primary-soft-glow); border-color:var(--primary); }
+
+        @media (max-width: 768px) {
+            body { padding-top: 60px; }
+             .navbar { height:60px; }
+            .nav-logo { height: 34px;}
+            .error-code { font-size: clamp(4rem, 22vw, 8rem); }
+            .error-message-h1 { font-size: clamp(1.1rem, 5.5vw, 1.8rem); }
+        }
+         @media (max-width: 480px) {
+            .error-code { font-size: clamp(3.5rem, 20vw, 7rem); }
+            .error-message-h1 { font-size: clamp(1rem, 5vw, 1.5rem); }
+            .error-description { font-size: clamp(0.8rem, 3vw, 0.95rem); }
+        }
+    </style>
+</head>
+<body>
+    <div id="preloader"><div class="spinner"></div></div>
+    <!-- No Particles on 404 for faster load/redirect -->
+    <div class="content-wrapper">
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo-link">
+                    <img src="https://glowing-boba-bb33bb.netlify.app/logo_home.png" alt="Spargat Group Logo" class="nav-logo">
+                </a>
+            </div>
+        </nav>
+
+        <main class="error-page-container">
+            <div class="error-code">404</div>
+            <h1 class="error-message-h1">Page Not Found</h1>
+            <p class="error-description">
+                The page you were looking for doesn't exist. You will be redirected to the homepage shortly.
+            </p>
+            <p class="error-description">
+                If you are not redirected automatically, please <a href="index.html">click here</a>.
+            </p>
+        </main>
+
+        <footer class="footer">
+             <div class="social-links">
+                <a href="https://github.com/spargatgroup" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://gitlab.com/spargat" target="_blank" title="GitLab"><i class="fab fa-gitlab"></i></a>
+                <a href="https://discord.gg/PqZtGn3HMn" target="_blank" title="Discord"><i class="fab fa-discord"></i></a>
+                <a href="https://youtube.com/@BlockmanLauncher" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://spargat.itch.io/" target="_blank" title="Itch.io"><i class="fab fa-itch-io"></i></a>
+            </div>
+            <p class="copyright">&copy; 2024 Spargat Group. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Preloader Script
+        (function() {
+            const preloader = document.getElementById('preloader');
+            function hidePreloader() {
+                if (preloader) {
+                    preloader.classList.add('loaded');
+                    setTimeout(() => {
+                       if (preloader && preloader.parentNode) {
+                           preloader.parentNode.removeChild(preloader);
+                       }
+                    }, 700); // Match CSS transition
+                }
+            }
+            // For 404, we want to hide preloader quickly as redirect is main goal
+            // but still give it a moment to show if redirect is slightly delayed by browser
+            if (document.readyState === 'complete') {
+                 setTimeout(hidePreloader, 100); // Hide very quickly if already loaded
+            } else {
+                window.addEventListener('load', () => setTimeout(hidePreloader, 100));
+            }
+        })();
+
+        // Fallback JavaScript redirect in case meta refresh fails or is disabled.
+        (function() {
+            var redirectUrl = 'index.html'; // Ensure this path is correct
+            // The meta refresh tag should handle the redirect.
+            // This JS redirect is a fallback and will trigger after the meta refresh's specified delay (0s).
+            // We add a small delay here to ensure meta refresh has a chance.
+            setTimeout(function() {
+                window.location.replace(redirectUrl); // Use replace to avoid adding 404 to history
+            }, 200); // 200ms delay, very short, after meta refresh (0s) should have triggered
+        })();
+    </script>
+</body>
+</html>
