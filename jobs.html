@@ -1,11 +1,10 @@
-<!DOCTYPE html>
+\<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Careers - Join Spargat Group</title>
+    <title>Careers - Join Spargat Group (Lenis Scroll)</title>
 
-    <!-- Meta Tags (Same as before) -->
     <meta name="description" content="Join Spargat Group: A Developer Group, Small But Great Team! Explore opportunities to contribute.">
     <meta property="og:title" content="Careers at Spargat Group">
     <meta property="og:description" content="A Developer Group, Small But Great Team!">
@@ -13,17 +12,12 @@
     <meta property="og:url" content="https://spargatgroup.github.io/jobs.html">
     <meta property="og:site_name" content="Spargat Group">
     <meta property="og:image" content="https://glowing-boba-bb33bb.netlify.app/logo_home.png">
-    <meta property="og:image:alt" content="Spargat Group Logo">
-    <meta property="og:locale" content="en_US">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Careers at Spargat Group">
-    <meta name="twitter:description" content="A Developer Group, Small But Great Team!">
-    <meta name="twitter:image" content="https://glowing-boba-bb33bb.netlify.app/logo_home.png">
     <meta name="theme-color" content="#7950F2">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script> {/* LENIS SCRIPT */}
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script> 
+
     <style>
         :root {
             --primary: #7950F2; --primary-light: #926BFF; --primary-glow: rgba(121, 80, 242, 0.5);
@@ -35,7 +29,7 @@
             --announcement-bg: rgba(var(--primary-rgb), 0.15);
             --announcement-text: var(--light-text);
             --announcement-link: var(--primary-light);
-            --total-fixed-offset: 70px;
+            --total-fixed-offset: 70px; 
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; background: var(--dark-bg); scrollbar-gutter: stable both-edges; }
@@ -43,7 +37,7 @@
             font-family: 'Poppins', sans-serif; background-color: var(--dark-bg); color: var(--light-text);
             line-height: 1.7; overflow-x: hidden; min-height: 100vh; position: relative;
             scrollbar-width: thin; scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
-            padding-top: var(--total-fixed-offset);
+            padding-top: var(--total-fixed-offset); 
             transition: padding-top 0.3s ease-out;
             -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;
         }
@@ -59,7 +53,7 @@
         @keyframes spin { to { transform: rotate(360deg); } }
 
         #particles-js { position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: 0; opacity: 0.08; }
-        .content-wrapper { position: relative; z-index: 1; }
+        .content-wrapper { position: relative; z-index: 1; } 
 
         .announcement-box { background-color: var(--announcement-bg); color: var(--announcement-text); padding: 0.75rem 1.5rem; text-align: center; font-size: 0.9rem; position: fixed; left: 0; width: 100%; z-index: 999; box-shadow: 0 2px 10px rgba(0,0,0,0.2); display: flex; justify-content: center; align-items: center; gap: 0.75rem; transition: transform 0.3s ease-out, opacity 0.3s ease-out; transform: translateY(0%); }
         .announcement-box.hidden { transform: translateY(-200%); opacity: 0; pointer-events: none; }
@@ -78,24 +72,18 @@
         .nav-links a.active::after, .nav-links a:hover::after { width: 100%; }
 
         .container { max-width: 900px; margin: 0 auto; padding: 0 1.5rem; width: 100%; }
-        .jobs-hero { padding-bottom: 2rem; text-align: center; position: relative; }
+        .page-hero { 
+            padding-bottom: 2rem; text-align: center; position: relative;
+        }
         main > section { padding-top: 3rem; padding-bottom: 3rem; min-height: auto; }
-        section[id] { scroll-margin-top: var(--total-fixed-offset); } /* For Lenis/browser native scroll to hash */
+        section[id] { scroll-margin-top: var(--total-fixed-offset); }
         
-        #openApplyModalBtnSticky { /* This is the button that might be sticky */
-            /* Default styles, will be overridden by .is-sticky if Locomotive is used and configured */
+        #openApplyModalBtn { 
             font-size: 1rem; padding: 0.8rem 2rem;
-            /* No fixed positioning here by default */
-        }
-        #openApplyModalBtnSticky[data-scroll-sticky].is-sticky { /* If using Locomotive sticky */
-            position: fixed !important; bottom: 2.5rem; right: 2.5rem;
-            left: auto; top: auto; transform: none !important; z-index: 997;
-            box-shadow: 0 8px 20px var(--primary-glow);
         }
 
-
-        .jobs-hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 700; margin-bottom: 0.8rem; line-height: 1.25; color: var(--light-text); text-shadow: 0 0 12px var(--primary-soft-glow); }
-        .jobs-hero p.subtitle { font-size: clamp(0.9rem, 2vw, 1.15rem); max-width: 650px; margin: 0 auto 1.5rem; color: var(--medium-text); font-weight: 400; }
+        .page-hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 700; margin-bottom: 0.8rem; line-height: 1.25; color: var(--light-text); text-shadow: 0 0 12px var(--primary-soft-glow); }
+        .page-hero p.subtitle { font-size: clamp(0.9rem, 2vw, 1.15rem); max-width: 650px; margin: 0 auto 1.5rem; color: var(--medium-text); font-weight: 400; }
         .section-title { font-size: clamp(1.6rem, 3.5vw, 2.2rem); font-weight: 600; margin-bottom: 2rem; color: var(--light-text); position: relative; padding-bottom: 0.5rem; text-shadow: 0 0 6px var(--primary-soft-glow); border-bottom: 1px solid var(--border-color); }
         .content-section ul { list-style: none; padding-left: 0; margin-bottom: 1.5rem; }
         .content-section ul li { background: rgba(var(--primary-rgb), 0.05); border-left: 3px solid var(--primary); padding: 0.7rem 1rem; margin-bottom: 0.6rem; border-radius: 4px; color: var(--medium-text); font-size: 0.9rem; transition: background-color 0.3s ease, border-color 0.3s ease; }
@@ -131,13 +119,13 @@
             .nav-logo { height: 34px; }
             .nav-links { gap: 0.4rem 0.8rem; justify-content: center; flex-wrap: wrap;}
             .nav-links a { font-size:0.8rem; padding: 0.3rem 0.15rem; }
-            .jobs-hero h1 { font-size: clamp(1.8rem, 5vw, 2.8rem); }
-            .jobs-hero p.subtitle { font-size: clamp(0.85rem, 2vw, 1.1rem); }
+            .page-hero h1 { font-size: clamp(1.8rem, 5vw, 2.8rem); }
+            .page-hero p.subtitle { font-size: clamp(0.85rem, 2vw, 1.1rem); }
             .section-title { font-size: clamp(1.5rem, 3.5vw, 2rem); margin-bottom: 1.5rem; }
             .content-section ul li { font-size: 0.85rem; padding: 0.6rem 0.9rem; }
             .content-section p { font-size: 0.9rem; }
             .btn { padding: 0.6rem 1.1rem; font-size:0.85rem; }
-            #openApplyModalBtnSticky[data-scroll-sticky].is-sticky { bottom: 1.5rem; right: 1.5rem; padding: 0.6rem 1.1rem; font-size:0.85rem; width: auto; }
+            #openApplyModalBtn { font-size: 0.9rem; padding: 0.7rem 1.5rem; } 
             .apply-buttons-container { justify-content: center; }
             .modal-content { padding: 1.5rem; }
             .modal-content h3 {font-size: 1.4rem;}
@@ -145,11 +133,11 @@
         }
         @media (max-width: 480px) {
             .container { padding: 0 1rem; }
-            .jobs-hero h1 { font-size: clamp(1.6rem, 6vw, 2.2rem); }
-            .jobs-hero p.subtitle { font-size: clamp(0.8rem, 3vw, 1rem); }
+            .page-hero h1 { font-size: clamp(1.6rem, 6vw, 2.2rem); }
+            .page-hero p.subtitle { font-size: clamp(0.8rem, 3vw, 1rem); }
             .section-title {font-size: clamp(1.4rem, 4vw, 1.8rem);}
             .apply-buttons-container a.btn { width: 100%; margin-right: 0; }
-            #openApplyModalBtnSticky[data-scroll-sticky].is-sticky { width: calc(100% - 2rem); left: 1rem; right: 1rem; transform: none !important; text-align: center; }
+            #openApplyModalBtn { width: calc(100% - 2rem); margin-left: 1rem; margin-right: 1rem; }
         }
     </style>
 </head>
@@ -162,7 +150,7 @@
     </div>
 
     <div id="particles-js"></div>
-    <div class="content-wrapper"> {/* This div is for content that is NOT fixed, but will be scrolled by Lenis */}
+    <div class="content-wrapper"> 
         <nav class="navbar">
             <div class="nav-container">
                 <a href="index.html" class="nav-logo-link">
@@ -178,13 +166,11 @@
             </div>
         </nav>
 
-        <header class="jobs-hero" id="careers-hero"> {/* Changed ID for clarity */}
+        <header class="page-hero" id="careers-hero"> 
             <div class="container">
                 <h1>Shape the Future with Spargat Group</h1>
                 <p class="subtitle">We're seeking passionate developers and contributors to help us build the next generation of Blockman GO tools and experiences.</p>
-                <button class="btn btn-primary" id="openApplyModalBtnSticky"
-                        style="font-size: 1rem; padding: 0.8rem 2rem;"
-                        data-scroll data-scroll-sticky data-scroll-target="#careers-hero" data-scroll-offset="30%, -30%">
+                <button class="btn btn-primary" id="openApplyModalBtn"> 
                     <i class="fas fa-paper-plane"></i> Express Interest
                 </button>
             </div>
@@ -274,10 +260,10 @@
                     <a href="https://youtube.com/@BlockmanLauncher" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
                     <a href="https://spargat.itch.io/" target="_blank" title="Itch.io"><i class="fab fa-itch-io"></i></a>
                 </div>
-                <p class="copyright">&copy; 2024 Spargat Group. A community-driven organization. <br>Not affiliated with NetEase or Mojang. Blockman GO is a registered trademark of NetEase.</p>
+                <p class="copyright">© 2024 Spargat Group. A community-driven organization. <br>Not affiliated with NetEase or Mojang. Blockman GO is a registered trademark of NetEase.</p>
             </div>
         </footer>
-    </div> <!-- END .content-wrapper -->
+    </div> 
 
     <div class="modal-overlay" id="applyModal">
         <div class="modal-content">
@@ -292,18 +278,16 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
     <script>
-        // JS for jobs.html with Locomotive Scroll, Announcement, Modal, Sticky Button
         document.addEventListener("DOMContentLoaded", function() {
-            // NO Lenis initialization here, using Locomotive Scroll
-            const scrollContainer = document.querySelector('[data-scroll-container]');
-            let locoScroll;
+            const lenis = new Lenis({ lerp: 0.085, duration: 1.6, smoothWheel: true });
+            function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+            requestAnimationFrame(raf);
 
             const navbar = document.querySelector('.navbar');
             const announcementBox = document.getElementById('announcementBox');
-            const bodyElement = document.body; // For body padding
-            // const scrollContentWrapper = scrollContainer ? scrollContainer.querySelector('.loco-scroll-content-wrapper') : null; // Not needed if padding body
+            const bodyElement = document.body;
+            const allSectionsWithId = document.querySelectorAll("main > section[id], header.page-hero[id]");
 
             const getNavbarHeight = () => (navbar ? navbar.offsetHeight : 0);
             const getAnnouncementHeight = () => (announcementBox && !announcementBox.classList.contains('hidden') ? announcementBox.offsetHeight : 0);
@@ -315,69 +299,13 @@
 
                 document.documentElement.style.setProperty('--total-fixed-offset', `${totalFixedOffset}px`);
                 if (announcementBox) announcementBox.style.top = `${navHeight}px`;
-                bodyElement.style.paddingTop = `${totalFixedOffset}px`; // Apply padding to body
+                bodyElement.style.paddingTop = `${totalFixedOffset}px`;
                 
-                // For Locomotive, scroll-margin-top on sections inside the scroll container
-                document.querySelectorAll('[data-scroll-container] [data-scroll-section][id]').forEach(sec => {
-                    sec.style.scrollMarginTop = `0px`; // Reset, loco offset handles this
+                allSectionsWithId.forEach(sec => {
+                    sec.style.scrollMarginTop = `${totalFixedOffset}px`;
                 });
-
-                if (locoScroll) locoScroll.update();
             }
             
-            function initLocoScroll() {
-                if (!scrollContainer) { console.error("Locomotive Scroll container not found!"); return; }
-                if (locoScroll) locoScroll.destroy();
-                locoScroll = new LocomotiveScroll({ 
-                    el: scrollContainer, 
-                    smooth: true, 
-                    lerp: 0.08, 
-                    smartphone: { smooth: true }, 
-                    tablet: { smooth: true },
-                    getDirection: true
-                });
-                setTimeout(() => { if (locoScroll) locoScroll.update(); }, 350);
-                
-                new ResizeObserver(() => { if (locoScroll) locoScroll.update(); adjustLayout(); }).observe(scrollContainer);
-
-                const navLinks = document.querySelectorAll(".nav-links a");
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === 'jobs.html') {
-                        link.classList.add('active');
-                    }
-                });
-
-                document.querySelectorAll('a[data-scroll-to], a[href^="#"]').forEach(anchor => {
-                    anchor.addEventListener('click', function (e) {
-                        const hrefVal = this.dataset.scrollTo || this.getAttribute('href');
-                        if (!hrefVal || !hrefVal.startsWith("#")) return;
-                        e.preventDefault();
-                        const totalFixedOffsetForScrollTo = getNavbarHeight() + getAnnouncementHeight();
-                        const targetElement = document.querySelector(hrefVal);
-                        if (targetElement) {
-                            locoScroll.scrollTo(targetElement, { offset: -totalFixedOffsetForScrollTo + 15, duration: 1200 });
-                        } else if (hrefVal === "#" || hrefVal === "#careers-hero") {
-                            locoScroll.scrollTo(0, { duration: 1200 });
-                        }
-                    });
-                });
-                 if (window.location.hash) {
-                    setTimeout(() => {
-                        const hash = window.location.hash;
-                        const targetElement = document.querySelector(hash);
-                        if (targetElement) {
-                            const totalFixedOffsetForScrollTo = getNavbarHeight() + getAnnouncementHeight();
-                            locoScroll.scrollTo(targetElement, { offset: -totalFixedOffsetForScrollTo + 15, duration: 0, disableLerp: true });
-                        } else if (hash === "#" || hash === "#careers-hero"){
-                             locoScroll.scrollTo(0, { duration: 0, disableLerp: true });
-                        }
-                    }, 250);
-                } else {
-                    setTimeout(() => { if(locoScroll) locoScroll.scrollTo(0, {duration:0, disableLerp: true}); }, 250);
-                }
-            }
-
             const closeAnnouncementBtn = document.getElementById('closeAnnouncement');
             if (announcementBox && closeAnnouncementBtn) {
                 announcementBox.classList.remove('hidden');
@@ -387,18 +315,59 @@
                 });
             }
             
-            adjustLayout(); // Initial call before loco init
+            adjustLayout();
             window.addEventListener('resize', adjustLayout);
-            initLocoScroll(); // Init Loco Scroll
-
+            
+            const navLinks = document.querySelectorAll(".nav-links a");
+            const currentPath = window.location.pathname.split("/").pop() || "jobs.html";
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                const linkPath = link.getAttribute('href').split("/").pop();
+                if (linkPath === currentPath) { link.classList.add('active');}
+            });
 
             const modalOverlay = document.getElementById('applyModal');
-            const openModalBtns = document.querySelectorAll('#openApplyModalBtnSticky, #openApplyModalBtnAgain');
+            const openModalBtns = document.querySelectorAll('#openApplyModalBtn, #openApplyModalBtnAgain, #openApplyModalBtnSticky'); 
             const closeModalBtn = document.getElementById('closeModalBtn');
+
             openModalBtns.forEach(btn => { if(btn) btn.addEventListener('click', (e) => { e.preventDefault(); modalOverlay.classList.add('active'); }); });
             if(closeModalBtn) closeModalBtn.addEventListener('click', () => modalOverlay.classList.remove('active'));
             if(modalOverlay) modalOverlay.addEventListener('click', (event) => { if (event.target === modalOverlay) modalOverlay.classList.remove('active'); });
             document.addEventListener('keydown', (event) => { if (event.key === 'Escape' && modalOverlay && modalOverlay.classList.contains('active')) modalOverlay.classList.remove('active'); });
+
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                   const href = this.getAttribute('href');
+                   if (!href.startsWith("#")) return;
+                    e.preventDefault();
+                    const totalOffset = getNavbarHeight() + getAnnouncementHeight();
+                    
+                    if (href === "#" || href === "#careers-hero") {
+                           lenis.scrollTo(0, { duration: 1.6, offset: 0 });
+                    } else {
+                        const targetElement = document.querySelector(href);
+                        if(targetElement){
+                            lenis.scrollTo(targetElement, { offset: -totalOffset + 15, duration: 1.6 });
+                        }
+                    }
+                });
+            });
+             if (window.location.hash) {
+                setTimeout(() => {
+                    const hash = window.location.hash;
+                    const totalOffset = getNavbarHeight() + getAnnouncementHeight();
+                    if (hash === "#" || hash === "#careers-hero") {
+                        lenis.scrollTo(0, { duration:0, immediate: true });
+                    } else {
+                        const targetElement = document.querySelector(hash);
+                        if(targetElement){
+                            lenis.scrollTo(targetElement, { offset: -totalOffset + 15 , duration: 0, immediate: true});
+                        }
+                    }
+                }, 150);
+            } else {
+                setTimeout(() => { lenis.scrollTo(0, {duration:0, immediate: true}); }, 150);
+            }
         });
     </script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
@@ -408,7 +377,7 @@
         }
     </script>
     <script>
-        (function() { /* Preloader JS */
+        (function() { 
             const preloader = document.getElementById('preloader'); function hidePreloader() { if (preloader) { preloader.classList.add('loaded'); setTimeout(() => { if (preloader && preloader.parentNode) { preloader.parentNode.removeChild(preloader); } }, 700); } } if (document.readyState === 'complete') { hidePreloader(); } else { window.addEventListener('load', hidePreloader); }
         })();
     </script>
